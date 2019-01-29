@@ -1,0 +1,615 @@
+/*----------------- STYLES -----------------------
+FONTS 
+from googlefont
+
+    title: font-family: 'Fredericka the Great', cursive;
+    subTitle: font-family: 'Cormorant Garamond', serif;
+    text: font-family: 'Roboto', sans-serif;
+
+COLORS 
+from design given
+    base: #152d20  (darkgreen)
+    secondary: #c3d3cb; (lightgreen)
+ */
+
+ /* normalize */
+ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* The above code is the setup  given to us in class */
+
+.visuallyHidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+/* visuallyHidden is code we used in class to hide the lable */
+
+/* font size 125% = 16px standerd 1rem =16px */
+
+/*------goble styles------*/
+
+html{
+    font-size: 125%;
+}
+
+body{
+    
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 1260px;
+    min-width: 375px;
+    width: 80%;
+}
+
+h1,h2{
+    font-family: 'Fredericka the Great', cursive;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+li{ 
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+.button{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    padding: 17px 16px;
+    border: none;
+}
+
+a.button {
+    color: #000;
+}
+
+/* this bit of code is from the notes for the focus */
+.skip {
+    position: absolute;
+	left: -1000px;
+	top: 100px;
+    z-index: 999;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+	background: #152d20;
+    color: #ffffff;
+    padding: 10px;
+		}
+
+.skip:focus {
+	left: 0;
+	}
+
+/* ----section one starts---- */
+
+header{
+    position: relative;
+}
+
+#home{
+    background-image: url("../assets/image-1.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    color:#ffffff;
+}
+
+.homeNav{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding: 1px;
+    display: inline-block; 
+}
+
+.homeNav ul{
+    margin-top: 24px;
+    padding: 0;
+}
+
+.homeNav ul li{
+    float: left;
+    margin-right: 20px;
+    
+}
+
+#home h1{
+    font-size: 7.5rem;
+    margin: 0;
+    line-height: 7rem;
+    text-align: right; 
+}
+
+.homeTitle{
+    float: right;
+    margin:88px 0 0 100%; 
+}
+
+.socialMediaLinks{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    bottom: -224px;
+    right: -86px;
+}
+
+.socialMediaLinks li{
+    text-align: center;
+    padding-top: 19px;
+}
+
+.socialMediaLinks li:nth-child(1){
+    padding-top: 0;
+}
+
+/*- main starts-*/
+/* ----section two starts---- */
+
+.sectionTwoSuziesStory{
+    background:#152d20;
+    color: #ffffff;
+    padding: 110px 0px;
+}
+
+.sectionTwoImage{
+    float: left;
+    width:  30%;
+}
+
+.sectionTwoText{
+    float: left;
+    max-width: calc(70% - 40px);
+    margin-left: 40px;
+}
+
+.sectionTwoText h2{
+    margin: 0;
+    font-size: 3.2rem;
+    line-height:38px; 
+}
+
+.sectionTwoText p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 1.25rem;
+    margin: 18px 0;
+    padding-bottom: 25px;
+}
+
+.sectionTwoSuziesStory a.button{
+    background: #ffffff;
+}
+
+/* ----section three starts---- */
+
+.sectionThreeAnimalFriends{
+    background:#c3d3cb;
+    padding: 110px 0px;
+}
+
+.sectionThreeAnimalFriends h2{
+    text-align: center;
+    margin: 0;
+    line-height: 2.5rem;
+    font-size: 3.2rem;
+    color: #152d20;
+}
+
+.sectionThreeAnimalFriends h2 span{
+    display: block;
+    line-height: 3.5rem;
+    margin-bottom: 93px;
+}
+
+
+.animalFriends{
+    width: 100%;
+}
+
+.animalFriend{
+    float:left;
+    margin-left:40px;
+    width: calc(33.33% -  27px)
+}
+
+.animalFriends .animalFriend img{
+    width: 100%;
+    display: block;
+}
+
+.animalFriends .animalFriend:nth-child(1){
+   margin-left: 0;
+} 
+
+/* ----section four starts---- */
+.sectionFourInfo{
+    background: #152d20;
+    text-transform: uppercase;
+    font-size: 2.4;  
+}
+
+.infoCard{
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    margin: 84px 0 55px 0;
+}
+
+.infoCard i{
+    font-size: 3.4rem;
+}
+
+.infoCard span{
+    display: block;
+}
+
+/* ----section five starts---- */
+
+.blog{
+    width: 50%;
+    padding: 10% 0;
+}
+
+.blogOne{
+    padding-right: 72px ;
+}
+
+.blogTwo{
+    float: right;
+    padding-left: 72px;
+}
+
+.blog h2{
+    color: #152d20;
+    margin: 0;
+}
+
+.blog h2 span{
+    display: block;
+}
+
+.blog p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color:#1f2022;
+    margin: 20px 0 40px 0;
+}
+
+.articalOne{
+    background: url("../assets/zebra.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;   
+}
+
+.articalTwo{
+    background: url("../assets/kitty.jpg") ;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 50%;   
+   
+}
+
+.blog a.button{
+    background: #152d20;
+    color: #ffffff;
+    margin-bottom: 125px;
+}
+
+.blog a.button {
+    color: #fff;
+}
+
+/* main ends */
+
+/* ----section six starts---- */
+
+.sectionSixFooter{
+    background: #152d20;
+    color: #ffffff;
+    padding-top:4%;
+}
+
+.footerColumn{
+    float: left;
+    width: 30%;
+    padding-bottom: 4%;
+}
+
+.footerColumn h2{
+    font-family: 'Cormorant Garamond';
+    font-size: 1.6rem;
+    margin: 13px 0;
+}
+
+nav.footerColumn1 ul{
+    margin: 13px 0;
+    padding: 0;
+}
+
+nav.footerColumn1 ul li a{
+    padding: 2px 0;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.footerColumn1{
+    font-size: 1.25rem;
+}
+
+.footerColumn2{
+    width:40%;
+    text-align: center;
+}
+
+.footerColumn3{
+    text-align: right;
+}
+
+.footerColumn2 p, .footerColumn3 p{
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    margin: 5px 0px;
+}
+
+form{
+    width: 100%;
+    margin-top:10px;
+}
+
+[type="text"]{
+    float: left;
+    width:75%;
+}
+
+[type="submit"]{
+    width:25%;
+    background: #000;
+    padding: 5px;
+    color: #ffffff;
+    font-family: 'Cormorant Garamond';
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border: none;
+    float: left;
+}
+
+.copyright {
+    clear: both;
+    background: #000;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    padding: 3px;
+}
+
+/*------desktop-tablet------*/
+
+@media screen and (max-width:1257px){
+    html{
+        font-size: 90%;
+        -webkit-transition: all ease-in-out .5s;
+        /* -webkit-transition from https://stackoverflow.com/questions/9311116/can-css3-transition-font-size */
+    }
+    /* ----section one starts desktop-tablet---- */
+
+    .socialMediaLinks{
+    bottom: -300px;
+    right: -40px;
+    }
+
+    /* ----section two starts desktop-tablet---- */
+
+    .sectionTwoImage{
+        width:  33.33%;
+    }
+
+    .sectionTwoText{
+        float: left;
+        max-width: calc(66.66% - 20px);
+        margin-left: 20px;
+    }
+
+    /* ----section three starts desktop-tablet---- */
+    .sectionThreeAnimalFriends{
+        padding: 70px 0px;
+    }
+
+    
+
+    .sectionThreeAnimalFriends h2 span{
+        margin-bottom: 50px;
+    }
+
+    .animalFriend{
+        float:left;
+        margin-left:20px;
+        width: calc(33.33% -  17px)
+    }
+
+        /* ----section five starts desktop-tablet---- */
+
+        .blog{
+            padding: 5% 0;
+        }
+        .blogOne{
+            padding-right: 72px ;
+        }
+
+        .blogTwo{
+            padding-left: 72px;
+        }
+
+    /* ----section six starts desktop-tablet---- */
+   .sectionSixFooter{
+    background: #152d20;
+    color: #ffffff;
+    padding-top: 0;
+    }
+
+    .footerColumn{
+        float: none;
+        width: 100%;
+        padding-bottom: 2%;
+    }
+
+    .footerColumn h2{
+        margin: 0;
+    }
+
+    nav.footerColumn{
+        width:60%;
+        margin-left:20%;
+        border: 1px solid red;
+    }
+   
+    nav.footerColumn1 ul li{
+        float: left;
+        margin-left: 8px;
+    }
+
+    nav.footerColumn1 ul li a{
+        padding: 5px;
+    }
+
+    nav.footerColumn1 ul{
+        margin: 0 0 0 20%;
+    }
+
+    .footerColumn2{
+        clear: both;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footerColumn3{
+        text-align: center;
+    }
+
+
+    form{
+        width: 60%;
+        margin-left:20%;
+    }
+
+    [type="text"]{
+        float: none;
+        width:100%;
+        height:30px;
+    }
+
+    [type="submit"]{
+        width:100%;
+        background: #000;
+        padding: 10px;
+       
+    }
+}
+
+/*------tablet------*/
+
+@media screen and (max-width:851px){
+    html{
+        font-size: 80%;
+    }
+    .button{
+    padding: 12px 11px;
+    }
+/* ----section one starts tablet---- */
+#home{
+    background-position: center left -300px;
+    position: relative;
+}
+
+.homeNav{
+    position: absolute;
+    right: 0;
+	top: 100%;
+    /* height: 0px; add back in later */
+    overflow: hidden;
+    border: 1px solid red;
+}
+
+.homeNav ul{
+    margin: 0;
+    border: 1px solid blue;
+}
+
+.homeNav ul li{
+    float: none;
+    margin: 0;
+    padding: 10px;
+    display: block;
+    background: #152d20;  
+    border-bottom:1px solid rgba(255,255,255, 0.2);
+}
+
+.homeNav ul li:nth-last-child(1){
+    border-bottom:none;
+}
+
+.homeNav ul li:hover{
+    background: rgba(21, 45, 32, 0.5);
+
+}
+
+.homeNav ul li a{
+    border: 1px solid red;
+    text-align: center;
+    padding: 10px;
+    width:100%;
+}
+
+#home h1{
+    font-size: 1.8rem;
+    margin: 0;
+    line-height: 2rem;
+    text-align: left; 
+}
+
+.homeTitle{
+    float: left;
+    margin:0; 
+}
+
+.socialMediaLinks{
+    display: none;
+}
+
+
+/* ----section six starts tablet---- */
+    nav.footerColumn1 ul{
+        margin: 0 0 0 10%;
+    }
+
+    form{
+        width: 100%;
+        margin-left:0;
+    }
+
+}
