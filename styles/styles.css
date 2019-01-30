@@ -1,7 +1,6 @@
 /*----------------- STYLES -----------------------
 FONTS 
 from googlefont
-
     title: font-family: 'Fredericka the Great', cursive;
     subTitle: font-family: 'Cormorant Garamond', serif;
     text: font-family: 'Roboto', sans-serif;
@@ -21,6 +20,7 @@ from design given
 
 /* The above code is the setup  given to us in class */
 
+/* visuallyHidden is code we used in class to hide the lable */
 .visuallyHidden:not(:focus):not(:active) {
     position: absolute;
     width: 1px;
@@ -33,18 +33,17 @@ from design given
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-/* visuallyHidden is code we used in class to hide the lable */
+
 
 /* font size 125% = 16px standerd 1rem =16px */
 
-/*------goble styles------*/
+/*------main styles------*/
 
 html{
     font-size: 125%;
 }
 
 body{
-    
     font-family: 'Cormorant Garamond', serif;
 }
 
@@ -104,13 +103,12 @@ a.button {
 	}
 
 /* ----section one starts---- */
-
 header{
     position: relative;
 }
 
 #home{
-    background-image: url("../assets/image-1.jpg");
+    background-image: url("../assets/backgroundImage.jpg");
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -131,8 +129,7 @@ header{
 
 .homeNav ul li{
     float: left;
-    margin-right: 20px;
-    
+    margin-right: 20px; 
 }
 
 #home h1{
@@ -167,7 +164,6 @@ header{
 
 /*- main starts-*/
 /* ----section two starts---- */
-
 .sectionTwoSuziesStory{
     background:#152d20;
     color: #ffffff;
@@ -204,7 +200,6 @@ header{
 }
 
 /* ----section three starts---- */
-
 .sectionThreeAnimalFriends{
     background:#c3d3cb;
     padding: 110px 0px;
@@ -224,7 +219,6 @@ header{
     margin-bottom: 93px;
 }
 
-
 .animalFriends{
     width: 100%;
 }
@@ -232,7 +226,7 @@ header{
 .animalFriend{
     float:left;
     margin-left:40px;
-    width: calc(33.33% -  27px)
+    width: calc(33.33% -  27px);
 }
 
 .animalFriends .animalFriend img{
@@ -267,7 +261,6 @@ header{
 }
 
 /* ----section five starts---- */
-
 .blog{
     width: 50%;
     padding: 10% 0;
@@ -306,11 +299,10 @@ header{
 }
 
 .articalTwo{
-    background: url("../assets/kitty.jpg") ;
+    background: url("../assets/kittyTwo.jpg") ;
     background-repeat: no-repeat;
     background-position: left;
     background-size: 50%;   
-   
 }
 
 .blog a.button{
@@ -324,9 +316,7 @@ header{
 }
 
 /* main ends */
-
 /* ----section six starts---- */
-
 .sectionSixFooter{
     background: #152d20;
     color: #ffffff;
@@ -345,31 +335,31 @@ header{
     margin: 13px 0;
 }
 
-nav.footerColumn1 ul{
+nav.footerColumnOne ul{
     margin: 13px 0;
     padding: 0;
 }
 
-nav.footerColumn1 ul li a{
+nav.footerColumnOne ul li a{
     padding: 2px 0;
     display: inline-block;
     text-transform: uppercase;
 }
 
-.footerColumn1{
+.footerColumnOne{
     font-size: 1.25rem;
 }
 
-.footerColumn2{
+.footerColumnTwo{
     width:40%;
     text-align: center;
 }
 
-.footerColumn3{
+.footerColumnThree{
     text-align: right;
 }
 
-.footerColumn2 p, .footerColumn3 p{
+.footerColumnTwo p, .footerColumnThree p{
     font-size: 1.25rem;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
@@ -398,7 +388,7 @@ form{
     float: left;
 }
 
-.copyright {
+.copyright{
     clear: both;
     background: #000;
     color: #ffffff;
@@ -409,22 +399,21 @@ form{
 }
 
 /*------desktop-tablet------*/
-
 @media screen and (max-width:1257px){
-    html{
+    /* ----main styles desktop-tablet---- */
+     html{
         font-size: 90%;
         -webkit-transition: all ease-in-out .5s;
         /* -webkit-transition from https://stackoverflow.com/questions/9311116/can-css3-transition-font-size */
-    }
-    /* ----section one starts desktop-tablet---- */
+    } 
 
+    /* ----section one starts desktop-tablet---- */
     .socialMediaLinks{
-    bottom: -300px;
-    right: -40px;
+        bottom: -300px;
+        right: -40px;
     }
 
     /* ----section two starts desktop-tablet---- */
-
     .sectionTwoImage{
         width:  33.33%;
     }
@@ -440,8 +429,6 @@ form{
         padding: 70px 0px;
     }
 
-    
-
     .sectionThreeAnimalFriends h2 span{
         margin-bottom: 50px;
     }
@@ -452,24 +439,24 @@ form{
         width: calc(33.33% -  17px)
     }
 
-        /* ----section five starts desktop-tablet---- */
+    /* ----section five starts desktop-tablet---- */
+     .blog{
+        padding: 5% 0;
+     }
 
-        .blog{
-            padding: 5% 0;
-        }
-        .blogOne{
-            padding-right: 72px ;
-        }
+     .blogOne{
+        padding-right: 72px;
+    }
 
-        .blogTwo{
-            padding-left: 72px;
-        }
+     .blogTwo{
+        padding-left: 72px;
+    }
 
     /* ----section six starts desktop-tablet---- */
    .sectionSixFooter{
-    background: #152d20;
-    color: #ffffff;
-    padding-top: 0;
+        background: #152d20;
+        color: #ffffff;
+        padding-top: 0;
     }
 
     .footerColumn{
@@ -485,32 +472,31 @@ form{
     nav.footerColumn{
         width:60%;
         margin-left:20%;
-        border: 1px solid red;
+        padding: 5% 0;
     }
-   
-    nav.footerColumn1 ul li{
+  
+    nav.footerColumnOne ul li{
         float: left;
         margin-left: 8px;
     }
 
-    nav.footerColumn1 ul li a{
+    nav.footerColumnOne ul li a{
         padding: 5px;
     }
 
-    nav.footerColumn1 ul{
-        margin: 0 0 0 20%;
+    nav.footerColumnOne ul{
+        margin: 0 0 0 10%;
     }
 
-    .footerColumn2{
+    .footerColumnTwo{
         clear: both;
         width: 100%;
         text-align: center;
     }
 
-    .footerColumn3{
+    .footerColumnThree{
         text-align: center;
     }
-
 
     form{
         width: 60%;
@@ -527,89 +513,290 @@ form{
         width:100%;
         background: #000;
         padding: 10px;
-       
+    }
+
+    [type="text"], [type="submit"]{
+        margin-top: 15px;
     }
 }
 
 /*------tablet------*/
-
 @media screen and (max-width:851px){
+    /* ----main styles tablet---- */
     html{
         font-size: 80%;
     }
+
     .button{
-    padding: 12px 11px;
+        padding: 12px 11px;
     }
-/* ----section one starts tablet---- */
-#home{
-    background-position: center left -300px;
-    position: relative;
-}
 
-.homeNav{
-    position: absolute;
-    right: 0;
-	top: 100%;
-    /* height: 0px; add back in later */
-    overflow: hidden;
-    border: 1px solid red;
-}
+    /* ----section one starts tablet---- */
+    #home{
+        background-position: center left -300px;
+        position: relative;
+    }
 
-.homeNav ul{
-    margin: 0;
-    border: 1px solid blue;
-}
+    /* nav dropdown */
+    /*nav hamburger menu still a work in progress*/
+    .homeNav{
+        display:none;
+        position: absolute;
+        right: 20px;
+        top: 100%;
+    }
 
-.homeNav ul li{
-    float: none;
-    margin: 0;
-    padding: 10px;
-    display: block;
-    background: #152d20;  
-    border-bottom:1px solid rgba(255,255,255, 0.2);
-}
+    div.hamburgerNavToggle:hover div.homeNav{
+        display: block;  
+    }
 
-.homeNav ul li:nth-last-child(1){
-    border-bottom:none;
-}
+    .homeNav ul{
+        margin: 0;
+    }
 
-.homeNav ul li:hover{
-    background: rgba(21, 45, 32, 0.5);
+    .homeNav ul li{
+        float: none;
+        text-align: center;
+        margin: 0;
+        padding: 15px;
+        display: block;
+        background: #152d20;  
+        border-bottom:1px solid rgba(255,255,255, 0.2);
+    }
 
-}
+    .homeNav ul li:nth-last-child(1){
+        border-bottom: none;
+    }
 
-.homeNav ul li a{
-    border: 1px solid red;
-    text-align: center;
-    padding: 10px;
-    width:100%;
-}
+    .homeNav ul li:hover{
+        background: rgba(21, 45, 32, 0.5);
+    }
 
-#home h1{
-    font-size: 1.8rem;
-    margin: 0;
-    line-height: 2rem;
-    text-align: left; 
-}
+    .homeNav ul li a{
+        padding: 10% 15%;
+    }
 
-.homeTitle{
-    float: left;
-    margin:0; 
-}
+    /* hamburger */
+    .hamburgerNavToggle{
+        padding: 20px;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        cursor: pointer;
+    }
+    .hamburgerOne, .hamburgerTwo, .hamburgerThree{
+        content: '';
+        display: block;
+        background: #ffffff;
+        height: 3px;
+        width: 35px;
+        border-radius: 3px;
+        transition: all ease-in-out 500ms;
+    }
 
-.socialMediaLinks{
-    display: none;
-}
+    .hamburgerOne{
+        transform: translateY(-15px);
+    }
+
+    .hamburgerThree{
+        transform: translateY(6px);
+    }
+            
+    .hamburgerNavToggle:hover .homeNav{
+        display: block;
+    }
+
+    .hamburgerNavToggle:hover .hamburgerOne{
+        transform: rotate(45deg);
+    }
+
+    .hamburgerNavToggle:hover .hamburgerTwo {
+        opacity: 0;
+    }
+
+    .hamburgerNavToggle:hover .hamburgerThree {
+        transform: translateY(-3px) rotate(-50deg);
+    }
+    /* This code for the nav is a mix of following a youtube tutorial and things ive learned from the note both webDev and bootcamp    https://www.youtube.com/watch?v=U17mz-RFfAY */
+    /* nav ends */
+
+    #home h1{
+        font-size: 2.5rem;
+        margin: 0;
+        line-height: 2.8rem;
+        text-align: left; 
+    }
+
+    .homeTitle{
+        float: left;
+        margin:0; 
+        padding: 20px;
+    }
+
+    .socialMediaLinks{
+        display: none;
+    }
+
+    /* ----section two starts tablet---- */
+    .sectionTwoSuziesStory{
+        padding: 50px 0px;
+        text-align: center;
+    }
+
+    .sectionTwoImage{
+        float: none;
+        width:  90%;
+        margin: 0 auto;
+    }
+
+    .sectionTwoImage img{
+        width: 100%;
+    }
+
+    .sectionTwoText h2{
+        font-size: 2.5rem;
+        margin-top: 40px;  
+        text-align: left;
+    }
+
+    .sectionTwoText{
+        float: none;
+        max-width: 90%;
+        margin: 0 auto;
+    }
 
 
-/* ----section six starts tablet---- */
-    nav.footerColumn1 ul{
-        margin: 0 0 0 10%;
+    .sectionTwoText p{
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    /* ----section three starts tablet---- */
+
+    .sectionThreeAnimalFriends{
+        padding: 50px 0px;
+    }
+
+    .animalFriends{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .animalFriend{
+        float:left;
+        width: calc(50% - 10px);
+        margin-left: 10px;
+    }
+    .animalFriends .animalFriend:nth-child(2){
+        margin: 0 10px 0 0;
+    } 
+
+    .animalFriends .animalFriend:nth-child(1){
+        display: none;
+    } 
+
+    .animalFriends .animalFriend img{
+        width: 100%;
+        display: block;
+    }
+
+    /* ----section four starts tablet---- */
+    .sectionFourInfo{
+        padding: 25px 0;
+        font-size: 1.5rem;
+    }
+
+    /* ----section five starts tablet---- */
+    .blog{
+        width: 90%;
+        padding: 110% 0 0 0 ;
+        margin: 0 auto;
+        text-align: center;
+        margin: 40px auto;
+    }
+
+    .blogOne{
+        padding-right: 0px;
+        margin-top: 0;  
+    }
+
+    .blogTwo{
+        float: none;
+        padding-left: 0px;
+    }
+
+    .blog p{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color:#1f2022;
+        margin: 20px auto 40px auto;
+    }
+
+    .articalOne{
+        background: url("../assets/zebra.jpg");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100%;   
+    }
+
+    .articalTwo{
+        background: url("../assets/kittyTwo.jpg") ;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100%;   
+    }
+
+    /* ----section six starts tablet---- */
+    .sectionSixFooter{
+        padding-top: 30px;
+    }
+    
+    nav.footerColumnOne{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    nav.footerColumnOne ul{
+        margin-left: 9%;
     }
 
     form{
-        width: 100%;
-        margin-left:0;
+        width: 90%;
+        margin:0 auto;
+    }
+}
+
+/*------mobile------*/
+ @media screen and (max-width:500px){
+
+    /* ----section one starts mobile---- */
+     #home{
+        background-position: center left -400px;
+        position: fix;
     }
 
+    /* ----section four starts mobile---- */
+    .sectionFourInfo{
+        padding: 25px 0;
+        font-size: 1.5rem;
+    }
+
+    .infoCard{
+        width: 100%;
+        float: none;
+        text-align: center;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    /* ----section five starts mobile---- */
+    .blog{
+        padding: 100% 0 0 0;
+    }
+
+    /* ----section six starts mobile---- */
+
+    nav.footerColumnOne ul{
+        margin-left: 9%;
+    }
 }
